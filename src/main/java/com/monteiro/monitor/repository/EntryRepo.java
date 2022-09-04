@@ -12,5 +12,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface EntryRepo extends JpaRepository<Entry, UUID> {
 
-    public Collection<Entry> findAllByTag(Hashtag tag);
+    public Collection<Entry> findAllByTagOrderByInsertDateDesc(Hashtag tag);
 }
